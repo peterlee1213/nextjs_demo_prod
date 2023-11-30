@@ -1,11 +1,9 @@
 import { NextRequest } from "next/server";
 
-const middleware = (request:NextRequest) => {
-
-}
+const middleware = (request: NextRequest) => {};
 
 const config = {
-    matcher: "/"
-}
+  matcher: "/",
+};
 
-export {middleware, config}
+export { middleware, config };
