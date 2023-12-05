@@ -1,4 +1,4 @@
 {
     "editor.formatOnSave": true,
-    "prettier.prettierPath": "node_modules/prettier/index.cjs"
+    "prettier.prettierPath": ""
 }
