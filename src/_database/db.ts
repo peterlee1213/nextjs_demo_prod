@@ -19,3 +19,5 @@ async function execSql<T>(q: string): Promise<T | unknown> {
     return { error };
   }
 }
+
+export { execSql };
