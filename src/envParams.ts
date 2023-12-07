@@ -23,6 +23,16 @@ const getEnvSpecificParam = (entity: string) => {
           return "Signup";
       }
     }
+    case "indexTitle": {
+      switch (NODE_ENV) {
+        case "development":
+          return "Connect VPN(dev)";
+        case "test":
+          return "Connect VPN(test)";
+        case "production":
+          return "Connect VPN";
+      }
+    }
     default: {
       return `${entity} undefined`;
     }
