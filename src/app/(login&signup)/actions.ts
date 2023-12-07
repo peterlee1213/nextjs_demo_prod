@@ -1,5 +1,3 @@
-"use server";
-
 const { WEB_HOST } = process.env;
 
 const handleLogin = async (a: any) => {
