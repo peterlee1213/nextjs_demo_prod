@@ -1,8 +1,8 @@
-import * as CONST from "./const.ts";
+import * as CONST from "./const";
 import { Container } from "@mui/material";
-import Header from "./_components/header.ts";
-import Content from "./_components/content.ts";
-import Footer from "./_components/footer.ts";
+import Header from "./_components/header";
+import Content from "./_components/content";
+import Footer from "./_components/footer";
 
 function Home() {
   return (
