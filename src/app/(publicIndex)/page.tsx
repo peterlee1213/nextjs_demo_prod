@@ -1,13 +1,8 @@
-import * as CONST from "./const";
+import * as CONST from "./const.ts";
 import { Container } from "@mui/material";
-import Header from "./_components/header";
-import Content from "./_components/content";
-import Footer from "./_components/footer";
-
-const containerStyle: React.CSSProperties = {
-  maxWidth: CONST.maxContentWidth,
-  overflow: "hidden",
-};
+import Header from "./_components/header.ts";
+import Content from "./_components/content.ts";
+import Footer from "./_components/footer.ts";
 
 function Home() {
   return (
@@ -19,7 +14,10 @@ function Home() {
           background: CONST.primaryColor,
         }}
       >
-        <Container style={containerStyle} className="flex justify-between">
+        <Container
+          style={CONST.containerStyle}
+          className="flex justify-between"
+        >
           <Header></Header>
         </Container>
       </header>
@@ -27,7 +25,7 @@ function Home() {
         <Content></Content>
       </main>
       <footer>
-        <Container style={containerStyle}>
+        <Container style={CONST.containerStyle}>
           <Footer></Footer>
         </Container>
       </footer>
@@ -35,5 +33,4 @@ function Home() {
   );
 }
 
-export { containerStyle };
 export default Home;

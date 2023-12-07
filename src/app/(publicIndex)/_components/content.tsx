@@ -1,7 +1,6 @@
 //body or main content of /
 import React from "react";
 import { Container } from "@mui/material";
-import { containerStyle } from "../page";
 import HomeSection from "./_contentSections/home";
 import FeatureSection from "./_contentSections/feature";
 import ServiceSection from "./_contentSections/service";
@@ -41,7 +40,7 @@ const Content = () => {
           className={sectionItem.class}
         >
           <Container
-            style={{ ...containerStyle, paddingTop: CONST.headerHeight }}
+            style={{ ...CONST.containerStyle, paddingTop: CONST.headerHeight }}
           >
             {sectionItem.component}
           </Container>
