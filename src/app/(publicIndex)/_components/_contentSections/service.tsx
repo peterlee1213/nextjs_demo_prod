@@ -33,9 +33,9 @@ const ServiceSection = () => {
       detail: (
         <div>
           <p>
-            ShadowSocks is a connectionless and stateless proxy protocol. It
+            {`ShadowSocks is a connectionless and stateless proxy protocol. It
             carries TCP UDP data and can easily penetrate the world's strongest
-            national firewall, China's GFW.
+            national firewall, China's GFW.`}
           </p>
           <br />
           <p>
@@ -108,7 +108,7 @@ const ServiceSection = () => {
         ></CardHeader>
         <CardContent>
           {serviceList.map((serviceItem, index) => (
-            <TabPanel value={index} currentIndex={tabIndex}>
+            <TabPanel key={index} value={index} currentIndex={tabIndex}>
               {serviceItem.detail}
             </TabPanel>
           ))}

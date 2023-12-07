@@ -31,16 +31,16 @@ const faqList = [
     answer: (
       <div>
         <Typography variant="body1">
-          ShadowSocks (abbreviated as SS, also known as ShadowShuttle) is an
+          {`ShadowSocks (abbreviated as SS, also known as ShadowShuttle) is an
           encrypted stateless proxy protocol. It works at the transport layer
           and relays TCP and UDP traffic. It can easily penetrate the most
-          powerful national firewall (China's GFW).
+          powerful national firewall (China's GFW).`}
         </Typography>
         <Typography variant="body1">
-          ShadowSocksR (abbreviated as SSR) is the main branch of SS. On the
+          {`ShadowSocksR (abbreviated as SSR) is the main branch of SS. On the
           basis of SS, SSR patched security vulnerabilities, expanded cipher
           suite options, added traffic obfuscation, and improved operator-level
-          QoS priorities.
+          QoS priorities.`}
         </Typography>
       </div>
     ),
@@ -160,9 +160,11 @@ const FaqSection = () => {
           {faqList.map((faqItem, index) => {
             if (index % 2 == 0) {
               return (
-                <FaqAccordian
-                  {...{ faqItem, index, expandIndex, handleAccordionChange }}
-                ></FaqAccordian>
+                <div key={index}>
+                  <FaqAccordian
+                    {...{ faqItem, index, expandIndex, handleAccordionChange }}
+                  ></FaqAccordian>
+                </div>
               );
             }
             return null;
@@ -172,9 +174,11 @@ const FaqSection = () => {
           {faqList.map((faqItem, index) => {
             if (index % 2 != 0) {
               return (
-                <FaqAccordian
-                  {...{ faqItem, index, expandIndex, handleAccordionChange }}
-                ></FaqAccordian>
+                <div key={index}>
+                  <FaqAccordian
+                    {...{ faqItem, index, expandIndex, handleAccordionChange }}
+                  ></FaqAccordian>
+                </div>
               );
             }
             return null;
