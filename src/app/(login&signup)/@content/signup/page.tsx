@@ -6,7 +6,7 @@ import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import { TextField, Button } from "@mui/material";
 
-const SignupTitle = async () => {
+const SignupTitle = () => {
   return (
     <form>
       <div>
