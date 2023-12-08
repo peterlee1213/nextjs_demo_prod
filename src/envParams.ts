@@ -33,6 +33,26 @@ const getEnvSpecificParam = (entity: string) => {
           return "Connect VPN";
       }
     }
+    case "dashboardTitle": {
+      switch (NODE_ENV) {
+        case "development":
+          return "Dashboard(dev)";
+        case "test":
+          return "Dashboard(test)";
+        case "production":
+          return "Dashboard";
+      }
+    }
+    case "adminDashboardTitle": {
+      switch (NODE_ENV) {
+        case "development":
+          return "Admin Dashboard(dev)";
+        case "test":
+          return "Admin Dashboard(test)";
+        case "production":
+          return "Admin Dashboard";
+      }
+    }
     default: {
       return `${entity} undefined`;
     }
