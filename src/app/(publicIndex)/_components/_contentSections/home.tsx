@@ -1,21 +1,15 @@
 import React from "react";
 import Image from "next/image";
 import EarthSvg from "../../_image/earth.svg";
-import { Typography } from "@mui/material";
-import * as CONST from "@/app/(publicIndex)/const";
 
-const HomeSection = () => {
+const HomeSection = async () => {
   return (
     <div className="flex justify-between">
-      <Typography
-        variant="h2"
-        className="self-center text-5xl font-bold"
-        sx={{ color: CONST.primaryColor }}
-      >
+      <h2 className="self-center text-5xl font-bold">
         <p className="whitespace-nowrap">Buy Affordable</p>
         <p className="whitespace-nowrap">And Cheap</p>
         <p className="whitespace-nowrap">VPN Here</p>
-      </Typography>
+      </h2>
       <Image
         src={EarthSvg}
         alt="index earth decoration"

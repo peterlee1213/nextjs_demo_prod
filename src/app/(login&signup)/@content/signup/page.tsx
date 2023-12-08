@@ -2,48 +2,37 @@
 
 import Link from "next/link";
 import * as CONST from "../../const";
-import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
-import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
-import { TextField, Button } from "@mui/material";
+import { Input, Button } from "@nextui-org/react";
 
 const SignupTitle = () => {
   return (
     <form>
       <div>
-        <TextField
+        <Input
           id="email"
           type="email"
           label="Email"
           {...CONST.inputCommonProps}
-          InputProps={{
-            startAdornment: <EmailOutlinedIcon />,
-          }}
         />
       </div>
       <div>
-        <TextField
+        <Input
           id="password"
           type="password"
           label="Password"
           {...CONST.inputCommonProps}
-          InputProps={{
-            startAdornment: <LockOutlinedIcon />,
-          }}
         />
       </div>
       <div>
-        <TextField
+        <Input
           id="password_repeat"
           type="password"
           label="Password Repeat"
           {...CONST.inputCommonProps}
-          InputProps={{
-            startAdornment: <LockOutlinedIcon />,
-          }}
         />
       </div>
       <div className="flex justify-between">
-        <Button variant="outlined">Signup</Button>
+        <Button>Signup</Button>
         <Link href="/login">
           <Button>Switch to Login</Button>
         </Link>

@@ -1,15 +1,7 @@
 "use client";
 import React from "react";
 
-import {
-  Typography,
-  Tabs,
-  Tab,
-  Card,
-  CardHeader,
-  CardContent,
-} from "@mui/material";
-import * as CONST from "@/app/(publicIndex)/const";
+import { Card, CardBody, Tabs, Tab } from "@nextui-org/react";
 
 type TabPanelProps = {
   children: React.ReactNode;
@@ -74,45 +66,28 @@ const ServiceSection = () => {
   return (
     <div className="pb-16 pt-2">
       <div className="flex flex-col gap-3 text-center">
-        <Typography
-          variant="h2"
-          className="text-3xl font-bold"
-          sx={{ color: CONST.primaryColor }}
-        >
+        <h2 className="text-3xl font-bold">
           The most advanced open source protocols and our proprietary techniques
-        </Typography>
-        <Typography
-          variant="body1"
-          className="text-xl"
-          sx={{ color: CONST.primaryColor }}
-        >
+        </h2>
+        <p className="text-xl">
           One service, compatible with multiple protocols, adapts to diverse
           network environments.
-        </Typography>
+        </p>
       </div>
       <Card className="mt-10">
-        <CardHeader
-          component={() => (
-            <Tabs value={tabIndex} className="flex" variant="fullWidth">
-              {serviceList.map((serviceItem, index) => (
-                <Tab
-                  value={index}
-                  label={serviceItem.name}
-                  key={index}
-                  onClick={() => setTabIndex(index)}
-                  className={`basis-1/${serviceList.length}`}
-                ></Tab>
-              ))}
-            </Tabs>
-          )}
-        ></CardHeader>
-        <CardContent>
-          {serviceList.map((serviceItem, index) => (
-            <TabPanel key={index} value={index} currentIndex={tabIndex}>
-              {serviceItem.detail}
-            </TabPanel>
-          ))}
-        </CardContent>
+        <CardBody>
+          <Tabs className="flex">
+            {serviceList.map((serviceItem, index) => (
+              <Tab
+                key={index}
+                title={serviceItem.name}
+                className={`basis-1/${serviceList.length}`}
+              >
+                {serviceItem.detail}
+              </Tab>
+            ))}
+          </Tabs>
+        </CardBody>
       </Card>
     </div>
   );

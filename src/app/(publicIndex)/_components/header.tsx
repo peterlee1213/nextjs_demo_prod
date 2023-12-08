@@ -1,7 +1,6 @@
 //header bar of /
-import { Typography } from "@mui/material";
 import * as CONST from "../const";
-import HeaderButton from "./headerButton";
+import { Button, ButtonProps } from "@nextui-org/react";
 import Link from "next/link";
 import { getEnvSpecificParam } from "@/envParams";
 
@@ -39,20 +38,19 @@ const userButtonList = [
   },
 ];
 
-const Header = () => {
+const Header = async () => {
   return (
     <>
-      <Typography
-        variant="h1"
+      <h1
         className="text-5xl font-bold"
         style={{ lineHeight: CONST.headerHeight, ...textStyle }}
       >
         <Link href="/">{getEnvSpecificParam("indexTitle")}</Link>
-      </Typography>
+      </h1>
       <div className="flex justify-between items-center gap-x-6">
         {navButtonList.map((item) => (
           <Link href={item.link} key={item.name}>
-            <HeaderButton>{item.name}</HeaderButton>
+            <Button>{item.name}</Button>
           </Link>
         ))}
       </div>
@@ -62,7 +60,7 @@ const Header = () => {
       >
         {userButtonList.map((item) => (
           <Link href={item.link} key={item.name}>
-            <HeaderButton>{item.name}</HeaderButton>
+            <Button>{item.name}</Button>
           </Link>
         ))}
       </div>

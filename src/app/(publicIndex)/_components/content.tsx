@@ -1,6 +1,5 @@
 //body or main content of /
 import React from "react";
-import { Container } from "@mui/material";
 import HomeSection from "./_contentSections/home";
 import FeatureSection from "./_contentSections/feature";
 import ServiceSection from "./_contentSections/service";
@@ -30,7 +29,7 @@ const sectionList = [
   },
 ];
 
-const Content = () => {
+const Content = async () => {
   return (
     <>
       {sectionList.map((sectionItem) => (
@@ -39,11 +38,11 @@ const Content = () => {
           key={sectionItem.id}
           className={sectionItem.class}
         >
-          <Container
+          <div
             style={{ ...CONST.containerStyle, paddingTop: CONST.headerHeight }}
           >
             {sectionItem.component}
-          </Container>
+          </div>
         </section>
       ))}
     </>

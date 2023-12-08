@@ -1,36 +1,32 @@
 import * as CONST from "./const";
-import { Container } from "@mui/material";
 import Header from "./_components/header";
 import Content from "./_components/content";
 import Footer from "./_components/footer";
 
-function Home() {
+const Home = async () => {
   return (
     <div>
       <header
-        className="fixed w-full top-0 shadow-2xl z-10"
+        className="fixed w-full top-0 shadow-2xl z-50"
         style={{
           height: CONST.headerHeight,
           background: CONST.primaryColor,
         }}
       >
-        <Container
-          style={CONST.containerStyle}
-          className="flex justify-between"
-        >
+        <div style={CONST.containerStyle} className="flex justify-between">
           <Header></Header>
-        </Container>
+        </div>
       </header>
       <main>
         <Content></Content>
       </main>
       <footer>
-        <Container style={CONST.containerStyle}>
+        <div style={CONST.containerStyle}>
           <Footer></Footer>
-        </Container>
+        </div>
       </footer>
     </div>
   );
-}
+};
 
 export default Home;

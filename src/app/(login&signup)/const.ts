@@ -1,8 +1,7 @@
-import { TextFieldProps } from "@mui/material";
+import { InputProps } from "@nextui-org/react";
 
-const inputCommonProps: Partial<TextFieldProps> = {
+const inputCommonProps: Partial<InputProps> = {
   className: "w-full mb-4",
-  variant: "outlined",
 };
 
 export { inputCommonProps };

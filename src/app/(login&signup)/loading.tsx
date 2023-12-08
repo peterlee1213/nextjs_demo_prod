@@ -1,9 +1,9 @@
 "use client";
 
-import CircularProgress from "@mui/material/CircularProgress";
+import { Spinner } from "@nextui-org/react";
 
 const Loading = () => {
-  return <CircularProgress></CircularProgress>;
+  return <Spinner></Spinner>;
 };
 
 export default Loading;

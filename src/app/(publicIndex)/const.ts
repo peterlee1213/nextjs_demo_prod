@@ -8,6 +8,7 @@ const secondaryColor = "#42b6f3";
 const containerStyle: React.CSSProperties = {
   maxWidth: maxContentWidth,
   overflow: "hidden",
+  margin: "0 auto",
 };
 
 export {

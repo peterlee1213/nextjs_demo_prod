@@ -1,16 +1,9 @@
 import React from "react";
-import {
-  Typography,
-  Card,
-  CardHeader,
-  CardContent,
-  Button,
-} from "@mui/material";
+import { Card, CardHeader, CardBody, Button } from "@nextui-org/react";
 import Link from "next/link";
-import * as CONST from "../../const";
 import { getEnvSpecificParam } from "@/envParams";
 
-const FeatureSection = () => {
+const FeatureSection = async () => {
   const featureList = [
     {
       title: "As fast as lightning",
@@ -45,49 +38,29 @@ const FeatureSection = () => {
   return (
     <>
       <div className="flex flex-col gap-3 text-center pt-2 pb-8">
-        <Typography
-          variant="h2"
-          className="text-3xl font-bold"
-          sx={{ color: CONST.primaryColor }}
-        >
+        <h2 className="text-3xl font-bold">
           Mainland first choice Best VPN in Asia
-        </Typography>
-        <Typography
-          variant="body1"
-          className="text-xl"
-          sx={{ color: CONST.primaryColor }}
-        >
+        </h2>
+        <p className="text-xl">
           After 5 years of research and development, protect the privacy of
           users in Greater China and overcome network blocking.
-        </Typography>
+        </p>
       </div>
       <div className="grid grid-cols-3 gap-8 mb-8 mt-6">
         {featureList.map((featureItem) => (
           <Card key={featureItem.title}>
-            <CardHeader
-              title={
-                <Typography variant="h3" className="text-xl">
-                  {featureItem.title}
-                </Typography>
-              }
-            ></CardHeader>
-            <CardContent>
-              <Typography
-                variant="body1"
-                className="text-base leading-normal"
-                paragraph
-              >
-                {featureItem.detail}
-              </Typography>
-            </CardContent>
+            <CardHeader>
+              <h3 className="text-xl">{featureItem.title}</h3>
+            </CardHeader>
+            <CardBody>
+              <p className="text-base leading-normal">{featureItem.detail}</p>
+            </CardBody>
           </Card>
         ))}
       </div>
       <div className="text-center pb-16">
         <Link href="/signup">
-          <Button variant="outlined">
-            try {getEnvSpecificParam("indexTitle")} immediately
-          </Button>
+          <Button>try {getEnvSpecificParam("indexTitle")} immediately</Button>
         </Link>
       </div>
     </>

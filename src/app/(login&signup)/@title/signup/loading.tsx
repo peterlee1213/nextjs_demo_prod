@@ -1,11 +1,10 @@
-import Skeleton from "@mui/material/Skeleton";
-import { Typography } from "@mui/material";
+import { Skeleton } from "@nextui-org/react";
 
 const Loading = () => {
   return (
-    <Typography component="div" variant={"h3"}>
+    <h3>
       <Skeleton />
-    </Typography>
+    </h3>
   );
 };
 
